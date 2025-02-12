@@ -1,26 +1,158 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Think Green Outdoor Solutions</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Placeholder styles to ensure responsiveness and basic layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .hero {
+            background: #e2e2e2;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+        }
+        .section {
+            padding: 20px 0;
+        }
+        .services, .portfolio {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service, .project {
+            background: #f9f9f9;
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(33% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .service img, .project img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .service, .project {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div id="header"></div> <!-- Placeholder for header -->
-    <!-- Main content of page -->
-    <main>
+    <header>
+        <h1>Think Green Outdoor Solutions</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
         <h1>Welcome to Think Green Outdoor Solutions</h1>
         <p>Your content goes here.</p>
-    </main>
+    </div>
 
-    <div id="footer"></div> <!-- Placeholder for footer -->
-    <!-- Scripts placed at bottom of page, rather than where they appear -->
-    <script src="../js/header.js"></script>
-    <script src="../js/footer.js"></script>
+    <div class="container">
+        <section class="section about">
+            <h2>About Us</h2>
+            <p>Placeholder for mission statement and company introduction.</p>
+            <img src="path/to/placeholder-image.jpg" alt="About Us Image">
+        </section>
+
+        <section class="section services">
+            <h2>Our Services</h2>
+            <div class="service">
+                <img src="path/to/placeholder-icon1.png" alt="Service 1">
+                <h3>Service 1</h3>
+                <p>Brief description of Service 1.</p>
+            </div>
+            <div class="service">
+                <img src="path/to/placeholder-icon2.png" alt="Service 2">
+                <h3>Service 2</h3>
+                <p>Brief description of Service 2.</p>
+            </div>
+            <div class="service">
+                <img src="path/to/placeholder-icon3.png" alt="Service 3">
+                <h3>Service 3</h3>
+                <p>Brief description of Service 3.</p>
+            </div>
+        </section>
+
+        <section class="section portfolio">
+            <h2>Our Work</h2>
+            <div class="project">
+                <img src="path/to/placeholder-project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Brief description of Project 1.</p>
+            </div>
+            <div class="project">
+                <img src="path/to/placeholder-project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Brief description of Project 2.</p>
+            </div>
+            <div class="project">
+                <img src="path/to/placeholder-project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Brief description of Project 3.</p>
+            </div>
+        </section>
+
+        <section class="section testimonials">
+            <h2>Testimonials</h2>
+            <blockquote>
+                <p>"Client testimonial goes here."</p>
+                <footer>- Client Name</footer>
+            </blockquote>
+        </section>
+
+        <section class="section contact-cta">
+            <h2>Get in Touch</h2>
+            <p>Ready to start your next project with us? Contact us today!</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Think Green Outdoor Solutions. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>
