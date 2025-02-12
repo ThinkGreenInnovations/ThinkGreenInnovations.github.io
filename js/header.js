@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const headerElement = document.querySelector('#header');
+    headerElement.innerHTML = ''; // Clear any existing content
     fetch('../html/includes/header.html')
         .then(response => response.text())
-        .then(data => document.querySelector('#header').innerHTML = data);
-    
+        .then(data => headerElement.innerHTML = data);
+});
+
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
 
