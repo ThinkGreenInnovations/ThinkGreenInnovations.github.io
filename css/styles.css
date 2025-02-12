@@ -188,7 +188,7 @@ footer ul.footer-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding: 10;
 }
 
 footer li {
