@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const headerElement = document.querySelector('#header');
-    headerElement.innerHTML = ''; // Clear any existing content
-    fetch('../html/includes/header.html')
-        .then(response => response.text())
-        .then(data => headerElement.innerHTML = data);
-});
-
+        const headerElement = document.querySelector('#header');
+        
+        if (headerElement) {
+            fetch('../html/includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerElement.innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+    
+    
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
 
