@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 html, body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -19,18 +20,36 @@ body {
     min-height: 100vh;
 }
 
-/* General Layout */
-main {
-    flex: 1;
-    padding: 20px;
-}
-
 /* Header Styles */
 header {
     background-color: #8CC84B;
-    padding: 0px;
+    padding: 5px;
     text-align: center;
-    color: rgb(6, 35, 11);
+    color: rgb(6, 35, 13);
+}
+
+.branding {
+    text-align: center;
+    margin-bottom: 5px; /* Reduce spacing between branding and next section */
+}
+
+.branding h1 {
+    font-size: 2rem;
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+.branding p {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.branding a {
+    text-decoration: none; /* Removes underline */
+    color: rgb(6, 35, 13)
+}
+
+.branding a:hover {
+    color: #4B823A /* Light green or any hover effect */
 }
 
 header h1 {
@@ -65,7 +84,7 @@ nav {
 
     nav a {
         text-decoration: none;
-        color: rgb(6, 35, 11);
+        color: rgb(6, 35, 13);
         font-weight: bold;
         padding: 10px 15px;
         transition: background-color 0.3s ease, color 0.3s ease;
@@ -87,7 +106,7 @@ nav {
     display: none;
     background: none;
     border: none;
-    color: rgb(6, 35, 11);
+    color: rgb(6, 35, 13);
     font-size: 2rem;
     cursor: pointer;
     position: absolute;
@@ -132,7 +151,7 @@ nav {
 #hero {
     background-image: url('../assets/images/placeholder-hero.jpg');
     background-size: cover;
-    color: rgb(6, 35, 11);
+    color: rgb(6, 35, 13);
     padding: 40px;
     text-align: center;
     border-radius: 10px;
@@ -172,7 +191,7 @@ nav {
 
 footer {
     background-color: #4B823A;
-    color: rgb(6, 35, 11);
+    color: rgb(6, 35, 13);
     text-align: center;
     padding: 10px;
     width: 100%;
