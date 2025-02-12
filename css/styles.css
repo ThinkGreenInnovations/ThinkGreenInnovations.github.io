@@ -42,9 +42,20 @@ header nav {
     text-align: center;
 }
 
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
+    margin: 0 15px;
+}
+
 header nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -53,7 +64,7 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* Mobile Menu */
+/* Hamburger Menu Styles */
 .hamburger {
     display: none;
     background: none;
@@ -67,6 +78,7 @@ header nav a:hover {
     transform: translateY(-50%);
 }
 
+/* Mobile Menu Styles */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -85,12 +97,16 @@ header nav a:hover {
 }
 
 @media (max-width: 768px) {
-    .desktop-menu {
-        display: none;
+    header nav ul {
+        display: none; /* Hide desktop menu on mobile */
     }
 
     .hamburger {
-        display: block;
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .mobile-menu {
+        display: flex;
     }
 }
 
