@@ -25,6 +25,19 @@ main {
     padding: 20px;
 }
 
+.branding {
+    text-align: center;
+}
+
+    .branding h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .branding p {
+        font-size: 1rem;
+    }
+
 /* Header Styles */
 header {
     background-color: #8CC84B;
@@ -170,7 +183,6 @@ nav {
     color: #555;
 }
 
-/* Footer Styles */
 footer {
     background-color: #4B823A;
     color: white;
@@ -182,6 +194,18 @@ footer {
 
 footer p {
     font-size: 0.9rem;
+}
+
+/* Added styles for horizontal layout */
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+footer li {
+    margin: 0 10px;
 }
 
 footer a {
