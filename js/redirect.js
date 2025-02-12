@@ -1,6 +1,6 @@
 <script>
         // JavaScript Redirect
-    window.location.href = "html/Home.html";
+    window.location.href = "html/home.html";
 
     // Load the header and footer includes
     fetch('includes/Header.html')
