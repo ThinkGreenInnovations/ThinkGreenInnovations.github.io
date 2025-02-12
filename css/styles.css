@@ -25,19 +25,6 @@ main {
     padding: 20px;
 }
 
-.branding {
-    text-align: center;
-}
-
-    .branding h1 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .branding p {
-        font-size: 1rem;
-    }
-
 /* Header Styles */
 header {
     background-color: #8CC84B;
@@ -197,7 +184,7 @@ footer p {
 }
 
 /* Added styles for horizontal layout */
-footer ul {
+footer ul.footer-links {
     list-style: none;
     display: flex;
     justify-content: center;
