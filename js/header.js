@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     fetch('../html/includes/header.html')
         .then(response => response.text())
-        .then(data => document.querySelector('header').innerHTML = data);
-
+        .then(data => document.querySelector('#header').innerHTML = data);
+    
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -20,4 +20,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
