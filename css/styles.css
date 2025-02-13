@@ -280,7 +280,6 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
     background-color: var(--dark-green);
-    color: var(--text-dark);
     border-radius: 5px;
 }
 
