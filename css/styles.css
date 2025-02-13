@@ -180,6 +180,24 @@ header::after {
     margin: 40px 20px 20px;
 }
 
+h2 {
+    text-align: center;
+    position: relative;
+    margin: 40px auto; /* Adds spacing above and below */
+    font-size: 2rem; /* Adjust as needed */
+    color: var(--text-dark);
+}
+
+h2::before,
+h2::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 2px; /* Adjust thickness */
+    background-color: var(--dark-green); /* Adjust color */
+    margin: 10px auto; /* Adds spacing between the lines and text */
+}
+
 /* Footer */
 footer {
     background-color: var(--medium-green);
