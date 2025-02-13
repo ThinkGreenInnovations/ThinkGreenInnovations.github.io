@@ -9,7 +9,7 @@
 :root {
     --dark-green: #2e5023;
     --medium-green: #588824;
-    --light-green: #9cc76c;
+    --light-green: #b3e079;
     --text-dark: rgb(6, 35, 13);
     --text-light: #ebf7d8;
     --background-light: #d1f0b7;
@@ -40,13 +40,29 @@ header {
     margin-bottom: 20px; /* Ensures spacing */
 }
 
+/* Main Heading */
 .branding h1 {
     font-size: 2.5rem;
+    font-weight: bold; /* Makes it stand out */
+    text-transform: uppercase; /* Converts to uppercase */
+    letter-spacing: 2px; /* Increases spacing between letters */
+    color: var(--text-dark);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 }
 
+/* Subheading / Slogan */
 .branding p {
     font-size: 1.2rem;
+    font-style: italic; /* Gives a subtle italic effect */
     color: var(--text-dark);
+    line-height: 1.5; /* Improves readability */
+    max-width: 600px; /* Prevents overly long lines */
+    margin: 0 auto; /* Centers text within the container */
+}
+
+.branding a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps the text color consistent */
 }
 
 /* Navbar */
@@ -162,7 +178,7 @@ header::after {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    margin: 20px; /* Ensures equal spacing on all sides */
+    margin: 30px; /* Ensures equal spacing on all sides */
 }
 
 /* Footer */
