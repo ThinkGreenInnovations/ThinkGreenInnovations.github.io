@@ -2,11 +2,32 @@ document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector('.carousel');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-    const cards = document.querySelectorAll('.carousel-card');
-    const totalCards = cards.length;
+    const totalCards = 5; // You can dynamically calculate this based on the data length later
     let scrollAmount = 0;
-    const cardWidth = cards[0].offsetWidth + 10; // Card width plus gap
-    let scrollDirection = 'next'; // To track direction
+    const cardWidth = 360; // Assuming this is the width of your card
+    let scrollDirection = 'next';
+
+    // Fetch the testimonials data from a JSON file or API
+    fetch('../data/testimonials.json') // Adjust the path based on where your JSON is located
+        .then(response => response.json())
+        .then(data => {
+            // Generate carousel cards dynamically
+            data.forEach(testimonial => {
+                const card = document.createElement('div');
+                card.classList.add('carousel-card');
+                card.innerHTML = `
+                    <p>"${testimonial.quote}"</p>
+                    <p>- ${testimonial.author}</p>
+                `;
+                carousel.appendChild(card);
+            });
+
+            // Update the total number of cards
+            totalCards = data.length;
+        })
+        .catch(error => {
+            console.error("Error fetching testimonials:", error);
+        });
 
     // Function to move the carousel
     function moveCarousel() {
@@ -15,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (scrollDirection === 'prev') {
             scrollAmount -= cardWidth;
         }
-        
+
         // If we're at the last card, loop to the first
         if (scrollAmount >= totalCards * cardWidth) {
             scrollAmount = 0;
