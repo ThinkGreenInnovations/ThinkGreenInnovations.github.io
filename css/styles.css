@@ -78,7 +78,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding: 5;
     margin: 0;
 }
 
@@ -94,7 +94,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--medium-green);
+    background-color: var(--light-green);
     border-radius: 5px;
 }
 
