@@ -209,7 +209,7 @@ h3 {
 .carousel-container {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 90%;
     padding: 20px;
 }
 
@@ -262,14 +262,6 @@ button {
         flex: 0 0 90%;
     }
 }
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .carousel-card {
-        flex: 0 0 90%; /* Adjust for smaller screens */
-    }
-}
-
 
 /* Footer */
 footer {
