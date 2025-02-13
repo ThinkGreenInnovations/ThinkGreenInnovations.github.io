@@ -178,7 +178,7 @@ header::after {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    margin: 30px; /* Ensures equal spacing on all sides */
+    margin: 40px 20px 20px;
 }
 
 /* Footer */
