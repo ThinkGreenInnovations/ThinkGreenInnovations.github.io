@@ -28,15 +28,15 @@ body {
 /* Header */
 header {
     background-color: var(--medium-green);
-    padding: 20px;
     text-align: center;
     position: relative;
+    padding: 20px 0;
 }
 
 /* Branding */
 .branding {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Ensures spacing */
 }
 
 .branding h1 {
@@ -51,11 +51,12 @@ header {
 /* Navbar */
 nav {
     background-color: var(--dark-green);
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px); /* Ensures navbar appears the same distance below branding as branding is from the top */
     text-align: center;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -75,13 +76,20 @@ nav a {
     color: var(--text-light);
     font-weight: bold;
     padding: 10px 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav a:hover {
     background-color: var(--medium-green);
     border-radius: 5px;
 }
+
+/* Ensure no extra header background under navbar */
+header::after {
+    content: "";
+    display: block;
+    height: 0;
+}
+
 
 /* Mobile Menu */
 .hamburger {
