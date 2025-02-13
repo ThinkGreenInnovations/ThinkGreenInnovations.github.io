@@ -22,10 +22,13 @@ body {
 
 /* Header Styles */
 header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #8CC84B;
-    padding: 10px;
-    text-align: center;
+    padding: 20px;
     color: rgb(6, 35, 13);
+    position: relative;
 }
 
 .branding {
@@ -57,12 +60,8 @@ header h1 {
 }
 
 nav {
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    align-self: stretch; /* Ensures nav spans full width of header */
+    margin-top: auto; /* Pushes nav to the bottom of header */
 }
 
     nav ul {
@@ -70,7 +69,7 @@ nav {
         list-style: none;
         display: flex;
         justify-content: center;
-        padding: 1px;
+        padding: 5px;
         margin: 0;
     }
 
