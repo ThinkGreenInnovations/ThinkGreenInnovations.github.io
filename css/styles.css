@@ -154,6 +154,9 @@ header::after {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    justify-content: center; /* Centers the grid horizontally */
+    max-width: 80%; /* Restricts width to keep it centered */
+    margin: 0 auto; /* Centers the container itself */
 }
 
 .grid-container .card {
@@ -193,7 +196,7 @@ h2::after {
     content: "";
     display: block;
     width: 75%;
-    height: 2px; /* Adjust thickness */
+    height: 1px; /* Adjust thickness */
     background-color: var(--dark-green); /* Adjust color */
     margin: 10px auto; /* Adds spacing between the lines and text */
 }
