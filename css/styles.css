@@ -93,6 +93,7 @@ nav a {
     padding: 10px 15px;
 }
 
+nav a.active,
 nav a:hover {
     background-color: var(--background-light);
     color: var(--text-dark);
