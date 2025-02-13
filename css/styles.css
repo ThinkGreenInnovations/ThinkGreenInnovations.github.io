@@ -215,24 +215,26 @@ h3 {
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
     gap: 10px;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
 }
 
 .carousel-card {
-    flex: 0 0 69%; /* Each card takes up 69% of the width */
+    flex: 0 0 69%;
     background-color: var(--light-green);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     opacity: 1;
-    transition: transform 0.3s ease;
+    transform: scale(0.9);
+    position: relative;
+    z-index: 1;
 }
 
-/* Add slight overlap effect */
 .carousel-card:nth-child(odd) {
-    transform: scale(0.9);
+    transform: scale(1);
 }
 
 button {
@@ -252,6 +254,13 @@ button {
 
 .next-btn {
     right: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .carousel-card {
+        flex: 0 0 90%;
+    }
 }
 
 /* Mobile Responsive */
