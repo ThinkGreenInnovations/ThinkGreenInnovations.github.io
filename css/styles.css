@@ -6,7 +6,7 @@
     --very-light-green: #D6E8C0;
 }
 
-/* Global Reset and Base Styles */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -62,7 +62,7 @@ header {
     color: var(--medium-green);
 }
 
-/* Navigation Bar */
+/* Desktop Navigation */
 nav {
     width: 100%;
     background-color: var(--medium-green);
@@ -73,6 +73,7 @@ nav {
     padding: 10px 0;
 }
 
+/* Desktop Menu */
 nav ul {
     list-style: none;
     display: flex;
@@ -104,13 +105,56 @@ nav a:active {
     background-color: var(--medium-green);
 }
 
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--dark-green);
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--medium-green);
+    z-index: 1000;
+    border-top: 1px solid var(--dark-green);
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* Ensure only one menu displays */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide desktop menu */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+}
+
 /* Intro Section */
 .intro {
     background-color: var(--medium-green);
     border-radius: 8px;
     padding: 15px;
-    margin: 0; /* Ensure no white space */
     text-align: center;
+    margin: 0; /* Eliminate unwanted white space */
 }
 
 .intro h2 {
