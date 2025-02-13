@@ -183,7 +183,7 @@ header::after {
 h2 {
     text-align: center;
     position: relative;
-    margin: 40px auto; /* Adds spacing above and below */
+    margin: 20px auto; /* Adds spacing above and below */
     font-size: 2rem; /* Adjust as needed */
     color: var(--text-dark);
 }
