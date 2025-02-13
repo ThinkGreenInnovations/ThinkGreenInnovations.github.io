@@ -60,16 +60,20 @@ header h1 {
 }
 
 nav {
-    align-self: stretch; /* Ensures nav spans full width of header */
-    margin-top: auto; /* Pushes nav to the bottom of header */
+    background-color: #4B823A;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
     nav ul {
-        background-color: #4B823A;
         list-style: none;
         display: flex;
         justify-content: center;
-        padding: 5px;
+        padding: 0;
         margin: 0;
     }
 
