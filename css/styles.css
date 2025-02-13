@@ -7,9 +7,9 @@
 
 /* Color Variables */
 :root {
-    --dark-green: #4B823A;
-    --medium-green: #8CC84B;
-    --light-green: #CDE7B0;
+    --dark-green: #2e5023;
+    --medium-green: #588824;
+    --light-green: #9cc76c;
     --text-dark: rgb(6, 35, 13);
     --text-light: #ebf7d8;
     --background-light: #d1f0b7;
@@ -75,7 +75,7 @@ nav a {
     color: var(--text-light);
     font-weight: bold;
     padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav a:hover {
