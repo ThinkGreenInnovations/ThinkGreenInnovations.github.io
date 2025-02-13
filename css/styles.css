@@ -278,7 +278,7 @@ footer {
 
 .footer-links a:hover {
     text-decoration: underline;
-    background-color: var(--background-light);
+    background-color: var(--dark-green);
     border-radius: 5px;
 }
 
