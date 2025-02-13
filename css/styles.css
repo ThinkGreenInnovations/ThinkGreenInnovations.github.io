@@ -1,3 +1,10 @@
+/* Define three shades of green */
+:root {
+    --light-green: #8CC84B;
+    --medium-green: #4B823A;
+    --dark-green: #2D4C21;
+}
+
 /* Global Reset and Base Styles */
 * {
     margin: 0;
@@ -5,11 +12,10 @@
     box-sizing: border-box;
 }
 
-
 html, body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--light-green);
+    color: var(--dark-green);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -25,136 +31,88 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #8CC84B;
+    background-color: var(--light-green);
     padding: 20px;
-    color: rgb(6, 35, 13);
+    color: var(--dark-green);
     position: relative;
 }
 
+/* Branding */
 .branding {
     text-align: center;
-    margin-bottom: 5px; /* Reduce spacing between branding and next section */
+    margin-bottom: 0; /* Prevent extra space */
 }
 
 .branding h1 {
     font-size: 2rem;
-    margin-bottom: 5px; /* Adjust as needed */
+    margin-bottom: 5px;
 }
 
 .branding p {
     font-size: 1rem;
-    margin-top: 0;
+    margin: 0;
 }
 
 .branding a {
-    text-decoration: none; /* Removes underline */
-    color: rgb(6, 35, 13)
+    text-decoration: none;
+    color: var(--dark-green);
 }
 
 .branding a:hover {
-    color: #4B823A /* Light green or any hover effect */
+    color: var(--medium-green);
 }
 
-header h1 {
-    font-size: 2.5rem;
-}
-
+/* Navigation */
 nav {
-    background-color: #4B823A;
-    padding: 10px;
+    width: 100%;
+    background-color: var(--medium-green);
     text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-}
-
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav li {
-        margin-right: 15px;
-    }
-
-        nav li:last-child {
-            margin-right: 0;
-        }
-
-    nav a {
-        text-decoration: none;
-        color: rgb(6, 35, 13);
-        font-weight: bold;
-        padding: 10px 15px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-        /* Hover and Active States */
-        nav a:hover,
-        nav a:focus {
-            background-color: #3e6b31; /* Slightly darker green */
-            border-radius: 5px;
-        }
-
-        nav a:active {
-            background-color: #2d4c21; /* Dark green for active state */
-        }
-
-/* Hamburger Menu Styles */
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: rgb(6, 35, 13);
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Mobile Menu Styles */
-.mobile-menu {
-    display: none;
-    flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #4B823A;
-    z-index: 1000;
-    border-top: 1px solid #3e6b31;
+    bottom: 0;
 }
 
-.mobile-menu.open {
+nav ul {
+    list-style: none;
     display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
-@media (max-width: 768px) {
-    header nav ul {
-        display: none; /* Hide desktop menu on mobile */
-    }
+nav li {
+    margin-right: 15px;
+}
 
-    .hamburger {
-        display: block; /* Show hamburger on mobile */
-    }
+nav li:last-child {
+    margin-right: 0;
+}
 
-    .mobile-menu {
-        display: flex;
-    }
+nav a {
+    text-decoration: none;
+    color: var(--dark-green);
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--dark-green);
+    color: var(--light-green);
+    border-radius: 5px;
+}
+
+nav a:active {
+    background-color: var(--medium-green);
 }
 
 /* Hero Section */
 #hero {
-    background-image: url('../assets/images/placeholder-hero.jpg');
     background-size: cover;
-    color: rgb(6, 35, 13);
+    color: var(--dark-green);
     padding: 40px;
     text-align: center;
     border-radius: 10px;
@@ -170,7 +128,7 @@ nav {
 }
 
 .grid-container .card {
-    background: white;
+    background: var(--light-green);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -178,23 +136,25 @@ nav {
 
 /* Intro Section */
 .intro {
-    background-color: #b9d4a4;
+    background-color: var(--medium-green);
     border-radius: 8px;
-    padding: 0px;
+    padding: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 0; /* Ensure no unwanted space */
 }
 
 .intro h2 {
-    color: #3b5c3b;
+    color: var(--dark-green);
 }
 
 .intro p {
-    color: #555;
+    color: var(--light-green);
 }
 
+/* Footer */
 footer {
-    background-color: #4B823A;
-    color: rgb(6, 35, 13);
+    background-color: var(--medium-green);
+    color: var(--dark-green);
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -205,12 +165,11 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Added styles for horizontal layout */
 footer ul.footer-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 10;
+    padding: 0;
 }
 
 footer li {
@@ -218,7 +177,7 @@ footer li {
 }
 
 footer a {
-    color: white;
+    color: var(--light-green);
     text-decoration: none;
 }
 
