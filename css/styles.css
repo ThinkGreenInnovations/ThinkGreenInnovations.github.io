@@ -185,18 +185,20 @@ nav a:hover {
         display: flex;
     }
 
-    /* ✅ Remove Bullet Points and Ensure Proper Containment */
+    /* ✅ Forcefully Remove Bullet Points and Ensure Proper Containment */
     .mobile-menu ul {
-        list-style: none; /* Remove bullet points */
-        padding: 0; /* Remove padding */
-        margin: 0; /* Remove margin */
-        width: 100%; /* Ensure full width */
+        list-style-type: none; /* Ensure no bullet points */
+        padding-left: 0;       /* Remove any left padding */
+        margin: 0;             /* Remove any margin */
+        width: 100%;           /* Ensure full width */
     }
 
+    /* ✅ Remove any residual styling from li items */
     .mobile-menu li {
-        width: 100%;
-        text-align: center; /* Center text inside each item */
-        margin: 0; /* No extra margin between items */
+        list-style-type: none; /* Remove any list styles from li */
+        width: 100%;           /* Make each item fill the container width */
+        text-align: center;    /* Center text inside each item */
+        margin: 0;             /* No extra margin between items */
     }
 
     /* ✅ Style Each Menu Item as a Button */
