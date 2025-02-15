@@ -136,7 +136,7 @@ nav a:hover {
         display: none;
     }
 
-    /* ✅ Styled Hamburger Button */
+    /* ✅ Centered Hamburger Button */
     .hamburger {
         display: block;
         background-color: var(--dark-green);
@@ -150,6 +150,8 @@ nav a:hover {
         text-transform: uppercase;
         font-weight: bold;
         margin-top: 10px;
+        
+        /* Center the hamburger button */
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -158,7 +160,7 @@ nav a:hover {
     .hamburger.active {
         background-color: var(--text-light);
         color: var(--dark-green);
-        transform: scale(1.1);
+        transform: scale(1.1) translateX(-50%); /* Keeps it centered even when scaled */
     }
 
     /* ✅ Mobile Menu */
@@ -183,7 +185,7 @@ nav a:hover {
         display: flex;
     }
 
-    /* ✅ Remove Bullet Points from Menu */
+    /* ✅ Remove Bullet Points and Ensure Proper Containment */
     .mobile-menu ul {
         list-style: none; /* Remove bullet points */
         padding: 0; /* Remove padding */
@@ -191,17 +193,17 @@ nav a:hover {
         width: 100%; /* Ensure full width */
     }
 
-    /* ✅ Style Each Menu Item as a Button */
     .mobile-menu li {
         width: 100%;
         text-align: center; /* Center text inside each item */
+        margin: 0; /* No extra margin between items */
     }
 
+    /* ✅ Style Each Menu Item as a Button */
     .mobile-menu a {
         display: inline-block;
-        width: 80%;
+        width: 100%; /* Make buttons fill the container width */
         padding: 12px;
-        margin: 5px 0;
         background-color: var(--background-light);
         color: var(--text-dark);
         text-decoration: none;
