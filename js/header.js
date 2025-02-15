@@ -1,30 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
-        const headerElement = document.querySelector('#header');
-        
-        if (headerElement) {
-            fetch('../html/includes/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    headerElement.innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-        }
-    
-    
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
+    const headerElement = document.querySelector('#header');
 
-    hamburger.addEventListener('click', function () {
-        mobileMenu.classList.toggle('open'); // Toggles open class on mobile menu
-        this.classList.toggle('active'); // Toggles active class on hamburger
-    });
+    if (headerElement) {
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                headerElement.innerHTML = data;
 
-    // Adding event listener for links to close mobile menu on click
-    const mobileLinks = document.querySelectorAll('.mobile-menu a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            mobileMenu.classList.remove('open');
-            hamburger.classList.remove('active');
-        });
-    });
+                // Add event listeners AFTER header is loaded
+                const hamburger = document.querySelector('.hamburger');
+                const mobileMenu = document.querySelector('.mobile-menu');
+
+                if (hamburger && mobileMenu) {
+                    hamburger.addEventListener('click', function () {
+                        mobileMenu.classList.toggle('open'); // Open/close menu
+                        this.classList.toggle('active'); // Animate hamburger
+                    });
+
+                    const mobileLinks = document.querySelectorAll('.mobile-menu a');
+                    mobileLinks.forEach(link => {
+                        link.addEventListener('click', function () {
+                            mobileMenu.classList.remove('open'); // Close menu on click
+                            hamburger.classList.remove('active');
+                        });
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    }
 });
