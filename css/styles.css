@@ -121,6 +121,7 @@ nav a:hover {
     border-radius: 10px; /* Rounded corners */
     padding: 10px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000; /* Ensure it sits above content */
 }
 
 /* Show Mobile Menu when Open */
@@ -149,20 +150,17 @@ nav a:hover {
         background-color: var(--dark-green);
         border: 2px solid var(--text-light);
         color: var(--text-light);
-        font-size: 2rem;
+        font-size: 1.8rem; /* Reduced size */
         cursor: pointer;
-        padding: 12px 20px;
+        padding: 10px 16px; /* Adjusted size */
         border-radius: 8px;
         transition: all 0.3s ease;
         text-transform: uppercase;
         font-weight: bold;
-    
-        /* Centering styles */
-        position: static;
         margin-top: 10px;
     }
 
-    .hamburger:hover {
+    .hamburger.active {
         background-color: var(--text-light);
         color: var(--dark-green);
         transform: scale(1.1);
@@ -183,13 +181,14 @@ nav a:hover {
         border-radius: 10px;
         padding: 10px 0;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
     }
 
     .mobile-menu.open {
         display: flex;
     }
 
-    /* ✅ Mobile Menu Buttons */
+    /* ✅ Remove Bullet Points, Style Items as Buttons */
     .mobile-menu a {
         display: block;
         width: 80%;
@@ -211,7 +210,6 @@ nav a:hover {
         transform: scale(1.05);
     }
 }
-
 
 
 /* Service Cards */
