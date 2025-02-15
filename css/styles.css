@@ -128,19 +128,30 @@ nav a:hover {
         display: none; /* Hide desktop navbar */
     }
 
+    /* Hide desktop navbar */
+     nav {
+        display: none;
+    }
+    
+    /* Center the hamburger button under branding */
     .hamburger {
-        display: block; /* Show hamburger */
+        display: block;
         background: none;
         border: none;
         color: var(--text-dark);
         font-size: 2rem;
         cursor: pointer;
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        z-index: 1001;
+    
+        /* Centering styles */
+        position: relative; /* Ensure it flows within the header */
+        margin: 15px auto 0; /* Space from branding and center horizontally */
+        display: flex; /* Align icon properly */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: fit-content; /* Only as wide as the icon */
     }
-
+    
+    /* Mobile Menu */
     .mobile-menu {
         display: none;
         flex-direction: column;
@@ -153,13 +164,11 @@ nav a:hover {
         z-index: 1000;
         padding: 10px 0;
     }
-
+    
     .mobile-menu.open {
         display: flex;
     }
 }
-
-
 
 /* Service Cards */
 .grid-container {
