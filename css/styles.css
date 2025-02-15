@@ -108,37 +108,31 @@ header::after {
 }
 
 
-/* Mobile Menu */
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--text-dark);
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--dark-green);
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-
 @media (max-width: 768px) {
     nav {
-        display: none;
+        display: none; /* Hides only the nav menu */
     }
 
-    .mobile-menu.open + nav {
+    .hamburger {
+        display: block; /* Ensures the button is visible */
+        position: absolute;
+        top: 10px; /* Adjust position if needed */
+        left: 10px;
+        z-index: 1001; /* Ensures it's above other elements */
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--dark-green);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .mobile-menu.open {
         display: flex;
     }
 }
