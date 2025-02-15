@@ -136,14 +136,6 @@ nav a:hover {
         display: none;
     }
 
-    /* Ensure the header expands for the hamburger */
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 10px; /* Adds space for the button */
-    }
-
     /* ✅ Styled Hamburger Button */
     .hamburger {
         display: block;
@@ -188,11 +180,23 @@ nav a:hover {
         display: flex;
     }
 
-    /* ✅ Remove Bullet Points, Style Items as Buttons */
+    /* ✅ Remove Bullet Points from Menu */
+    .mobile-menu ul {
+        list-style: none; /* Remove bullet points */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        width: 100%; /* Ensure full width */
+    }
+
+    /* ✅ Style Each Menu Item as a Button */
+    .mobile-menu li {
+        width: 100%;
+        text-align: center; /* Center text inside each item */
+    }
+
     .mobile-menu a {
-        display: block;
+        display: inline-block;
         width: 80%;
-        text-align: center;
         padding: 12px;
         margin: 5px 0;
         background-color: var(--background-light);
