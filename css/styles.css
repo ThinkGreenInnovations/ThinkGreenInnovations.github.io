@@ -111,10 +111,15 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     background-color: var(--dark-green);
-    width: 100%;
+    width: 90%;
+    max-width: 300px; /* Limits width */
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers menu */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 /* Show Mobile Menu when Open */
@@ -137,18 +142,27 @@ nav a:hover {
         padding-bottom: 10px; /* Adds space for the button */
     }
 
-    /* Center the hamburger button under branding */
+    /* Styled Hamburger Button */
     .hamburger {
         display: block;
-        background: none;
-        border: none;
-        color: var(--text-dark);
+        background-color: var(--dark-green);
+        border: 2px solid var(--text-light);
+        color: var(--text-light);
         font-size: 2rem;
         cursor: pointer;
-
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        
         /* Centering styles */
-        position: static; /* Removes absolute positioning */
-        margin-top: 10px; /* Adds spacing from branding */
+        position: static;
+        margin-top: 10px;
+    }
+
+    .hamburger:hover {
+        background-color: var(--text-light);
+        color: var(--dark-green);
+        transform: scale(1.1);
     }
 
     /* Mobile Menu */
@@ -157,18 +171,43 @@ nav a:hover {
         flex-direction: column;
         align-items: center;
         background-color: var(--dark-green);
-        width: 100%;
-        position: relative; /* Adjusted to fit below header content */
-        top: 0;
-        left: 0;
-        z-index: 1000;
+        width: 90%;
+        max-width: 300px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
         padding: 10px 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .mobile-menu.open {
         display: flex;
     }
+
+    /* Mobile Menu Buttons */
+    .mobile-menu a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        padding: 12px;
+        margin: 5px 0;
+        background-color: var(--background-light);
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
+        background-color: var(--text-dark);
+        color: var(--background-light);
+        transform: scale(1.05);
+    }
 }
+
 
 /* Service Cards */
 .grid-container {
