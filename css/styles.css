@@ -109,18 +109,25 @@ header::after {
 
 
 /* Mobile Menu */
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--text-dark);
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+/* Increase navbar height for mobile */
+@media (max-width: 768px) {
+    nav {
+        height: 60px; /* Adjust as needed */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Allow expanding */
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
+
 
 .mobile-menu {
     display: none;
